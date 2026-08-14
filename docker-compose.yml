@@ -1,0 +1,13 @@
+services:
+  do-ipv6-ddns:
+    build: .
+    container_name: do-ipv6-ddns
+    restart: unless-stopped
+    network_mode: host
+
+    environment:
+      INTERFACE: br0
+      HOSTNAME: myhomehub.de
+      DO_USER: ${DO_USER}
+      DO_PASS: ${DO_PASS}
+      CHECK_INTERVAL: 60
