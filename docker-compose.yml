@@ -11,3 +11,7 @@ services:
       DO_USER: ${DO_USER}
       DO_PASS: ${DO_PASS}
       CHECK_INTERVAL: 60
+      STATE_FILE: /data/current-prefix
+
+    volumes:
+      - ./data:/data
